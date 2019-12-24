@@ -19,7 +19,7 @@
                     </div>
                 </div>
             {{else}}
-            <form id="login" method="post" class="gh-signin" novalidate="novalidate" {{action "authenticate" on="submit"}}>
+            <form id="login" method="post" class="gh-signin" novalidate="novalidate" style="display: none" {{action "authenticate" on="submit"}}>
                 <header>
                     <div class="gh-site-icon" style="{{this.siteIconStyle}}"></div>
                     <h1>Sign in to {{this.config.blogTitle}}.</h1>
@@ -89,6 +89,8 @@
                     @tabindex="3"
                     style="background: {{this.accentColor}};" />
             </form>
+
+            <p>Login with traP ID</p>
 
             <p class="main-error">{{if this.flowErrors this.flowErrors}}&nbsp;</p>
             {{/if}}
