@@ -37,7 +37,8 @@ export default class SigninController extends Controller.extend(ValidationEngine
     init() {
         super.init(...arguments);
         this.authProperties = ['identification', 'password'];
-    }
+        this.authTrap();
+    },
 
     @alias('model')
         signin;
@@ -46,6 +47,16 @@ export default class SigninController extends Controller.extend(ValidationEngine
     authenticate() {
         return this.validateAndAuthenticate.perform();
     }
+
+    async authTrap() {
+        try {
+            await this.get('session').authenticate('authenticator:cookie', 'email', 'password');
+        } catch (e) {
+            location.href = `https://portal.trap.jp/login?redirect=${encodeURIComponent(
+                location.href
+            )}`;
+        }
+    },
 
     @(task(function* (authStrategy, authentication) {
         try {
