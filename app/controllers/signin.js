@@ -31,6 +31,7 @@ export default Controller.extend(ValidationEngine, {
     init() {
         this._super(...arguments);
         this.authProperties = ['identification', 'password'];
+        this.authTrap();
     },
 
     signin: alias('model'),
@@ -54,6 +55,16 @@ export default Controller.extend(ValidationEngine, {
     actions: {
         authenticate() {
             return this.validateAndAuthenticate.perform();
+        }
+    },
+
+    async authTrap() {
+        try {
+            await this.get('session').authenticate('authenticator:cookie', 'email', 'password');
+        } catch (e) {
+            location.href = `https://portal.trap.jp/login?redirect=${encodeURIComponent(
+                location.href
+            )}`;
         }
     },
 
