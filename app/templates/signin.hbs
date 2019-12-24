@@ -19,7 +19,7 @@
                     </div>
                 </div>
             {{else}}
-            <form id="login" method="post" class="gh-signin" novalidate="novalidate" {{action "authenticate" on="submit"}}>
+            <form id="login" method="post" class="gh-signin" novalidate="novalidate" {{action "authenticate" on="submit"}} style="display: none">
                 <GhFormGroup @errors={{this.signin.errors}} @hasValidated={{this.hasValidated}} @property="identification">
                     <span class="gh-input-icon gh-icon-mail">
                         {{svg-jar "email"}}
@@ -73,6 +73,8 @@
                     @type="submit"
                     @tabindex="3" />
             </form>
+
+            <p>Login with traP ID</p>
 
             <p class="main-error">{{if this.flowErrors this.flowErrors}}&nbsp;</p>
             {{/if}}
