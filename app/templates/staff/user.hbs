@@ -99,8 +99,8 @@
             <form class="user-profile" novalidate="novalidate" autocomplete="off" {{action (perform save) on="submit"}}>
 
                 <figure class="user-cover" style={{background-image-style user.coverImageUrl}}>
+                    {{#if false}}
                     <button type="button" class="gh-btn gh-btn-default user-cover-edit" {{action "toggleUploadCoverModal"}}><span>Change Cover</span></button>
-                    {{#if showUploadCoverModal}}
                         {{gh-fullscreen-modal "upload-image"
                                                 model=(hash model=user imageProperty="coverImage")
                                                 close=(action "toggleUploadCoverModal")
@@ -110,8 +110,8 @@
 
                 <figure class="user-image bg-whitegrey">
                     <div id="user-image" class="img" style={{background-image-style user.profileImageUrl}}><span class="hidden">{{user.name}}"s Picture</span></div>
+                    {{#if false}}
                     <button type="button" {{action "toggleUploadImageModal"}} class="edit-user-image">Edit Picture</button>
-                    {{#if showUploadImageModal}}
                         {{gh-fullscreen-modal "upload-image"
                                                 model=(hash model=user imageProperty="profileImage" paramsHash=(hash purpose="profile_image"))
                                                 close=(action "toggleUploadImageModal")
@@ -122,6 +122,7 @@
                 <div class="pa5">
                     <fieldset class="user-details-bottom">
 
+                        {{#if false}}
                         {{#gh-form-group errors=user.errors hasValidated=user.hasValidated property="name" class="first-form-group"}}
                             <label for="user-name">Full Name</label>
                             {{gh-text-input
@@ -181,6 +182,7 @@
                             {{/if}}
                             <p>Used for notifications</p>
                         {{/gh-form-group}}
+                        {{/if}}
 
                         {{#if rolesDropdownIsVisible}}
                             <div class="form-group">
@@ -283,7 +285,7 @@
             </form> {{! user details form }}
 
             {{!-- If an administrator is viewing Owner's profile then hide inputs for change password --}}
-            {{#if canChangePassword}}
+            {{#if false}}
                 <form id="password-reset" class="user-profile" novalidate="novalidate" autocomplete="off" {{action (perform user.saveNewPassword) on="submit"}}>
                     <div class="pa5">
                         <fieldset class="user-details-password">
