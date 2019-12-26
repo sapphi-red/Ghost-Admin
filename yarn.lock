@@ -1053,10 +1053,9 @@
   dependencies:
     "@tryghost/kg-clean-basic-html" "^0.1.4"
 
-"@tryghost/mobiledoc-kit@0.11.2-ghost.4":
+"@tryghost/mobiledoc-kit@traPtitech/mobiledoc-kit#traP-0.11.2-ghost.4":
   version "0.11.2-ghost.4"
-  resolved "https://registry.yarnpkg.com/@tryghost/mobiledoc-kit/-/mobiledoc-kit-0.11.2-ghost.4.tgz#144189e7e62748b3c56e7b723fa18a5e8c807ccf"
-  integrity sha512-C6FHFodOgxso+pZ6ArjBDRoGuzRHg42r3JJXzUX9ursIC2QLQUPsVDG42KN25x26EzOBUi6umB1CvO5bUryNPw==
+  resolved "https://codeload.github.com/traPtitech/mobiledoc-kit/tar.gz/be93d36ea2507612a2d054d9bcb6c200b82d625b"
   dependencies:
     mobiledoc-dom-renderer "0.6.5"
     mobiledoc-text-renderer "0.3.2"
