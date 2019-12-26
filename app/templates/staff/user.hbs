@@ -112,8 +112,8 @@
             <form class="user-profile" novalidate="novalidate" autocomplete="off" {{action (perform this.save) on="submit"}}>
 
                 <figure class="user-cover" style={{background-image-style this.user.coverImageUrl}}>
-                    <button type="button" class="gh-btn gh-btn-default user-cover-edit" {{action "toggleUploadCoverModal"}}><span>Change cover</span></button>
-                    {{#if this.showUploadCoverModal}}
+                    {{#if false}}
+                    <button type="button" class="gh-btn gh-btn-default user-cover-edit" {{action "toggleUploadCoverModal"}}><span>Change Cover</span></button>
                         <GhFullscreenModal @modal="upload-image"
                             @model={{hash model=this.user imageProperty="coverImage"}}
                             @close={{action "toggleUploadCoverModal"}}
@@ -122,9 +122,9 @@
                 </figure>
 
                 <figure class="user-image bg-whitegrey">
-                    <div id="user-image" class="img" style={{background-image-style this.user.profileImageUrl}}><span class="hidden">{{this.user.name}}"s picture</span></div>
-                    <button type="button" {{action "toggleUploadImageModal"}} class="edit-user-image">Edit picture</button>
-                    {{#if this.showUploadImageModal}}
+                    <div id="user-image" class="img" style={{background-image-style this.user.profileImageUrl}}><span class="hidden">{{this.user.name}}"s Picture</span></div>
+                    {{#if false}}
+                    <button type="button" {{action "toggleUploadImageModal"}} class="edit-user-image">Edit Picture</button>
                         <GhFullscreenModal @modal="upload-image"
                             @model={{hash model=this.user imageProperty="profileImage" paramsHash=(hash purpose="profile_image")}}
                             @close={{action "toggleUploadImageModal"}}
@@ -135,6 +135,7 @@
                 <div class="pa5">
                     <fieldset class="user-details-bottom">
 
+                        {{#if false}}
                         <GhFormGroup @errors={{this.user.errors}} @hasValidated={{this.user.hasValidated}} @property="name" @class="first-form-group">
                             <label for="user-name">Full name</label>
                             <GhTextInput
@@ -193,6 +194,7 @@
                             {{/if}}
                             <p>Used for notifications</p>
                         </GhFormGroup>
+                        {{/if}}
 
                         {{#if this.rolesDropdownIsVisible}}
                             <div class="form-group">
@@ -296,7 +298,7 @@
             </form> {{! user details form }}
 
             {{!-- If an administrator is viewing Owner's profile then hide inputs for change password --}}
-            {{#if this.canChangePassword}}
+            {{#if false}}
                 <form id="password-reset" class="user-profile" novalidate="novalidate" autocomplete="off" {{action (perform this.user.saveNewPassword) on="submit"}}>
                     <div class="pa5">
                         <fieldset class="user-details-form">
