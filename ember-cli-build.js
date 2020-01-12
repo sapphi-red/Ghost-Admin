@@ -257,5 +257,7 @@ module.exports = function (defaults) {
         app.import('vendor/simplemde/debug/simplemde.js', {type: 'test'});
     }
 
+    app.import('node_modules/highlight.js/styles/github.css');
+
     return app.toTree();
 };
