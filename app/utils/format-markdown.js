@@ -2,7 +2,7 @@ import markdownit from 'markdown-it';
 import markdownitFootnote from 'markdown-it-footnote';
 import markdownitLazyHeaders from 'markdown-it-lazy-headers';
 import markdownitMark from 'markdown-it-mark';
-import {katexPlugin} from '@traptitech/traq-markdown-it';
+import {katexPlugin, useContainer} from '@traptitech/traq-markdown-it';
 import {sanitizeHtml} from 'koenig-editor/helpers/sanitize-html';
 
 let slugify = function slugify(inputString, usedHeaders) {
@@ -58,6 +58,7 @@ md.linkify.set({
 md.use(katexPlugin, {
     output: 'html'
 });
+useContainer(md);
 
 export default function formatMarkdown(_markdown, replaceJS = true) {
     let markdown = _markdown || '';
