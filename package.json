@@ -128,6 +128,7 @@
     "simplemde": "https://github.com/kevinansfield/simplemde-markdown-editor.git#ghost",
     "testem": "3.0.2",
     "top-gh-contribs": "2.0.4",
+    "traq-markdown-it": "traPtitech/traq-markdown-it",
     "validator": "7.2.0",
     "walk-sync": "2.0.2"
   },
