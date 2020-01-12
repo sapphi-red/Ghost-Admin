@@ -32,6 +32,7 @@
     "@html-next/vertical-collection": "2.0.0",
     "@nexes/nql-lang": "0.0.1",
     "@sentry/ember": "6.13.2",
+    "@traptitech/traq-markdown-it": "^4.0.4",
     "@tryghost/color-utils": "0.1.2",
     "@tryghost/helpers": "1.1.52",
     "@tryghost/kg-clean-basic-html": "2.0.5",
