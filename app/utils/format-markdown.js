@@ -2,7 +2,7 @@ import markdownit from 'markdown-it';
 import markdownitFootnote from 'markdown-it-footnote';
 import markdownitLazyHeaders from 'markdown-it-lazy-headers';
 import markdownitMark from 'markdown-it-mark';
-import {katexPlugin, useContainer} from '@traptitech/traq-markdown-it';
+import {createHighlightFunc, katexPlugin, useContainer} from '@traptitech/traq-markdown-it';
 import {sanitizeHtml} from 'koenig-editor/helpers/sanitize-html';
 
 let slugify = function slugify(inputString, usedHeaders) {
@@ -41,6 +41,7 @@ let markdownitNamedHeaders = function markdownitNamedHeaders(md) {
 };
 
 let md = markdownit({
+    highlight: createHighlightFunc('blog-code'),
     html: true,
     breaks: true,
     linkify: true
