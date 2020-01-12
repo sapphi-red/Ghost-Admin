@@ -560,6 +560,7 @@ export default Controller.extend({
             return;
         }
 
+        newSlug += `@${this.get('post.displayName') === 'page'}`;
         serverSlug = yield this.slugGenerator.generateSlug('post', newSlug);
 
         // If after getting the sanitized and unique slug back from the API
