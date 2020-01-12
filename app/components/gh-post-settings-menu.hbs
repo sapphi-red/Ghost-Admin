@@ -31,6 +31,7 @@
                         {{/if}}
                     {{/unless}}
 
+                    {{#if (eq post.displayName "page") }}
                     <div class="gh-input-icon gh-icon-link">
                         {{svg-jar "link"}}
                         <GhTextInput
@@ -43,6 +44,9 @@
                             @stopEnterKeyDownPropagation={{true}} />
                     </div>
                     <GhUrlPreview @slug={{this.slugValue}} @tagName="p" @classNames="description" />
+                    {{else}}
+                    <GhUrlPreview @slug={{this.slugValue}} @tagName="p" @classNames="description" @prefix="post" />
+                    {{/if}}
                 </div>
 
                 <div class="form-group">
