@@ -1,3 +1,16 @@
+.blog-code {
+  position: relative;
+}
+.blog-code cite {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 4px;
+  font-size: .8em;
+  color: #333;
+  background: #ddd;
+}
+
 .gh-koenig-editor .success, .gh-koenig-editor .info, .gh-koenig-editor .warning, .gh-koenig-editor .danger {
   padding: 15px;
   margin-bottom: 12px;
