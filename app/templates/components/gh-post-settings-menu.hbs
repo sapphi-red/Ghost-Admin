@@ -172,9 +172,11 @@
                     post=post
                     onTemplateSelect=(action (mut post.customTemplate))}}
 
+                {{#if (gh-user-can-admin session.user)}}
                 {{#unless post.isNew}}
                     <button type="button" class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button" {{action "deletePost"}}><span>{{svg-jar "trash"}} Delete {{post.displayName}}</span></button>
                 {{/unless}}
+                {{/if}}
 
                 </form>
             </div>{{! .settings-menu-content }}
