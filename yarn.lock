@@ -1491,6 +1491,43 @@
   resolved "https://registry.yarnpkg.com/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz#8da5c6530915653f3a1f38fd5f101d8c3f8079c5"
   integrity sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
 
+"@traptitech/markdown-it-katex@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-katex/-/markdown-it-katex-3.3.0.tgz#7161a992e7df83b9d64dbcafdc5cb8afc552022a"
+  integrity sha512-9PM7tVjLn+mRYCTd8Aps8yuKOH8aRttZ8sMyVYkKltlLMDxFX1LfclZuRv01kct/Q7Euwe4neY/nB1wZNLjblg==
+  dependencies:
+    katex "^0.12.0"
+
+"@traptitech/markdown-it-regexp@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-regexp/-/markdown-it-regexp-0.5.1.tgz#690f5506e4237a367d980f242b6e88619b8bb95a"
+  integrity sha512-6ZNKTV8WJv7ukd4cgemmfbuRitnLXECUaw2qcHnhV0+3g2MKNIcunLHYGhBC/e7TvK37EvP33DzpEzJutGQOnA==
+  dependencies:
+    "@types/markdown-it" "^10.0.3"
+
+"@traptitech/markdown-it-spoiler@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@traptitech/markdown-it-spoiler/-/markdown-it-spoiler-1.1.4.tgz#533c94926c393aa0f2e097132882250392da960f"
+  integrity sha512-q/lxyYW+mcejbCDHk4qg7S66C59PWh0ZCLw1GSKRxzQ2qWxSTRa4G55GXVE9whLA7JUvN4fXQAmXjkg1rreO9g==
+
+"@traptitech/traq-markdown-it@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@traptitech/traq-markdown-it/-/traq-markdown-it-4.0.4.tgz#56d15529b5acdd3921a37f6296a9901d242ff1aa"
+  integrity sha512-T4b1W3Y6EbkmyPHFt/+dPQQVAmEV+BicBUajFsO91NfnN8hHG3BLN077UlDxFqRN+FiVO7D9EPQwVgsP9MO62w==
+  dependencies:
+    "@traptitech/markdown-it-katex" "^3.3.0"
+    "@traptitech/markdown-it-regexp" "^0.5.1"
+    "@traptitech/markdown-it-spoiler" "^1.1.4"
+    core-js "^3.8.0"
+    highlight.js "^10.4.0"
+    katex "^0.12.0"
+    markdown-it "^12.0.2"
+    markdown-it-container "^3.0.0"
+    markdown-it-image-filter "^1.1.0"
+    markdown-it-json "^1.0.2"
+    markdown-it-link-attributes "^3.0.0"
+    markdown-it-mark "^3.0.0"
+
 "@tryghost/helpers@1.1.34":
   version "1.1.34"
   resolved "https://registry.yarnpkg.com/@tryghost/helpers/-/helpers-1.1.34.tgz#6096f2a3f7439d92ff07da409c5149ccac71225c"
@@ -1615,6 +1652,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/highlight.js@^9.7.0":
+  version "9.12.4"
+  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-9.12.4.tgz#8c3496bd1b50cc04aeefd691140aa571d4dbfa34"
+  integrity sha512-t2szdkwmg2JJyuCM20e8kR2X59WCE5Zkl4bzm1u1Oukjm79zpbiAv+QjnwLnuuV0WHEcX2NgUItu0pAMKuOPww==
+
 "@types/json-schema@^7.0.5":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
@@ -1624,6 +1666,26 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+
+"@types/linkify-it@*":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/linkify-it/-/linkify-it-3.0.0.tgz#c0ca4c253664492dbf47a646f31cfd483a6bbc95"
+  integrity sha512-x9OaQQTb1N2hPZ/LWJsqushexDvz7NgzuZxiRmZio44WPuolTZNHDBCrOxCzRVOMwamJRO2dWax5NbygOf1OTQ==
+
+"@types/markdown-it@^10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@types/markdown-it/-/markdown-it-10.0.3.tgz#a9800d14b112c17f1de76ec33eff864a4815eec7"
+  integrity sha512-daHJk22isOUvNssVGF2zDnnSyxHhFYhtjeX4oQaKD6QzL3ZR1QSgiD1g+Q6/WSWYVogNXYDXODtbgW/WiFCtyw==
+  dependencies:
+    "@types/highlight.js" "^9.7.0"
+    "@types/linkify-it" "*"
+    "@types/mdurl" "*"
+    highlight.js "^9.7.0"
+
+"@types/mdurl@*":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/mdurl/-/mdurl-1.0.2.tgz#e2ce9d83a613bacf284c7be7d491945e39e1f8e9"
+  integrity sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
 
 "@types/mime@*":
   version "2.0.3"
@@ -2077,6 +2139,11 @@ argparse@^1.0.7:
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
 arr-diff@^4.0.0:
   version "4.0.0"
@@ -4529,7 +4596,7 @@ commander@2.8.x:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-commander@^2.20.0, commander@^2.6.0:
+commander@^2.19.0, commander@^2.20.0, commander@^2.6.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -4737,6 +4804,11 @@ core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.5:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
+core-js@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.8.0.tgz#0fc2d4941cadf80538b030648bb64d230b4da0ce"
+  integrity sha512-W2VYNB0nwQQE7tKS7HzXd7r2y/y2SVJl4ga6oH/dnaLFzM0o2lB2P3zCkWj5Wc/zyMYjtgd5Hmhk0ObkQFZOIA==
 
 core-object@^3.1.5:
   version "3.1.5"
@@ -8528,6 +8600,16 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
+highlight.js@^10.4.0:
+  version "10.4.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.4.1.tgz#d48fbcf4a9971c4361b3f95f302747afe19dbad0"
+  integrity sha512-yR5lWvNz7c85OhVAEAeFhVCc/GV4C30Fjzc/rCP0aCWzc1UUOPUk55dK/qdwTZHBvMZo+eZ2jpk62ndX/xMFlg==
+
+highlight.js@^9.7.0:
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -9499,6 +9581,13 @@ just-extend@^4.0.2:
   resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-4.1.1.tgz#158f1fdb01f128c411dc8b286a7b4837b3545282"
   integrity sha512-aWgeGFW67BP3e5181Ep1Fv2v8z//iBJfrvyTnq8wG86vEESwmonn1zPBJ0VfmT9CJq2FIT0VsETtrNFm2a+SHA==
 
+katex@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.12.0.tgz#2fb1c665dbd2b043edcf8a1f5c555f46beaa0cb9"
+  integrity sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==
+  dependencies:
+    commander "^2.19.0"
+
 "keymaster@https://github.com/madrobby/keymaster.git":
   version "1.6.3"
   resolved "https://github.com/madrobby/keymaster.git#f8f43ddafad663b505dc0908e72853bcf8daea49"
@@ -10096,17 +10185,37 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+markdown-it-container@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"
+  integrity sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==
+
 markdown-it-footnote@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/markdown-it-footnote/-/markdown-it-footnote-3.0.2.tgz#1575ee7a093648d4e096aa33386b058d92ac8bc1"
   integrity sha512-JVW6fCmZWjvMdDQSbOT3nnOQtd9iAXmw7hTSh26+v42BnvXeVyGMDBm5b/EZocMed2MbCAHiTX632vY0FyGB8A==
+
+markdown-it-image-filter@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-image-filter/-/markdown-it-image-filter-1.1.0.tgz#be4a29284c26ce51d82d426c5fb9f124a3eba47b"
+  integrity sha512-JwXUqgW9ySE576M8vCkajtkkeBEeKov5yT0F4o9Gd/cQrrj+UnKzVz8WIx0o3613CI8dPPcS1q44LDdZcikyGQ==
+
+markdown-it-json@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-json/-/markdown-it-json-1.0.2.tgz#9375713c2baf3781a8acbcbbb8a354d3c915eff8"
+  integrity sha512-R/1ZW3JU+ariFafSnV4KP8lbhs80P2SkdB2BdY5OYVoDkaNYeJUNcfnddTF6XmwTOL85Y5fO6urnkFNvkyOPeA==
 
 markdown-it-lazy-headers@0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/markdown-it-lazy-headers/-/markdown-it-lazy-headers-0.1.3.tgz#e70dd4da79c87a9ce82ca4701b8b7c0e2d72297b"
   integrity sha1-5w3U2nnIepzoLKRwG4t8Di1yKXs=
 
-markdown-it-mark@3.0.0:
+markdown-it-link-attributes@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-link-attributes/-/markdown-it-link-attributes-3.0.0.tgz#12d6f403102ac22695ee2617bec109ee79426e45"
+  integrity sha512-B34ySxVeo6MuEGSPCWyIYryuXINOvngNZL87Mp7YYfKIf6DcD837+lXA8mo6EBbauKsnGz22ZH0zsbOiQRWTNg==
+
+markdown-it-mark@3.0.0, markdown-it-mark@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-mark/-/markdown-it-mark-3.0.0.tgz#27c3e39ef3cc310b2dde5375082c9fa912983cda"
   integrity sha512-HqMWeKfMMOu4zBO0emmxsoMWmbf2cPKZY1wP6FsTbKmicFfp5y4L3KXAsNeO1rM6NTJVOrNlLKMPjWzriBGspw==
@@ -10128,6 +10237,17 @@ markdown-it@11.0.1, markdown-it@^11.0.0:
   integrity sha512-aU1TzmBKcWNNYvH9pjq6u92BML+Hz3h5S/QpfTFwiQF852pLT+9qHsrhM9JYipkOXZxGn+sGH8oyJE9FD9WezQ==
   dependencies:
     argparse "^1.0.7"
+    entities "~2.0.0"
+    linkify-it "^3.0.1"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
+markdown-it@^12.0.2:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.0.2.tgz#4401beae8df8aa2221fc6565a7188e60a06ef0ed"
+  integrity sha512-4Lkvjbv2kK+moL9TbeV+6/NHx+1Q+R/NIdUlFlkqkkzUcTod4uiyTJRiBidKR9qXSdkNFkgv+AELY8KN9vSgVA==
+  dependencies:
+    argparse "^2.0.1"
     entities "~2.0.0"
     linkify-it "^3.0.1"
     mdurl "^1.0.1"
