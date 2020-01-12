@@ -2,6 +2,7 @@ import markdownit from 'markdown-it';
 import markdownitFootnote from 'markdown-it-footnote';
 import markdownitLazyHeaders from 'markdown-it-lazy-headers';
 import markdownitMark from 'markdown-it-mark';
+import {katexPlugin} from 'traq-markdown-it';
 import {sanitizeHtml} from 'koenig-editor/helpers/sanitize-html';
 
 let slugify = function slugify(inputString, usedHeaders) {
@@ -54,6 +55,10 @@ md.linkify.set({
     fuzzyLink: false
 });
 
+md.use(katexPlugin, {
+    output: 'html'
+});
+
 export default function formatMarkdown(_markdown, replaceJS = true) {
     let markdown = _markdown || '';
     let escapedhtml = '';
@@ -61,5 +66,15 @@ export default function formatMarkdown(_markdown, replaceJS = true) {
     // convert markdown to HTML
     escapedhtml = md.render(markdown);
 
-    return sanitizeHtml(escapedhtml, {replaceJS});
+    // avoid sanitizing svg
+    let buf = [];
+    escapedhtml = escapedhtml.replace(/<svg[\s\S]+?\/svg>/g, m => `#math${buf.push(m)}#`);
+
+    // sanitize html
+    escapedhtml = sanitizeHtml(escapedhtml, {replaceJS});
+
+    // restore svg
+    escapedhtml = escapedhtml.replace(/#math(\d+)#/g, (m, i) => buf[parseInt(i) - 1]);
+
+    return escapedhtml;
 }
