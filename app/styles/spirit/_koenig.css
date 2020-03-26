@@ -20,7 +20,7 @@
 
 .koenig-editor__editor.__has-no-content:after,
 .koenig-text-replacement-html-input__editor.__has-no-content:after{
-    font-family: georgia,serif;
+    font-family: serif;
     font-weight: 300;
     letter-spacing: .02rem;
     line-height: 1.6em;
@@ -272,7 +272,7 @@
 .koenig-editor__editor ul:not(.kg-action-bar):not(.kg-link-toolbar),
 .koenig-editor__editor ol
  {
-    font-family: georgia,serif;
+    font-family: serif;
     font-weight: 400;
     line-height: 1.6em;
     font-size: 2.0rem;
@@ -642,7 +642,7 @@
 .koenig-editor__editor table {
     font-size: 1.75rem;
     margin: 0;
-    font-family: georgia,serif;
+    font-family: serif;
     letter-spacing: .02rem;
     line-height: 1.6em;
 }
