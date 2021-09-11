@@ -62,7 +62,7 @@ export default Controller.extend(ValidationEngine, {
         try {
             await this.get('session').authenticate('authenticator:cookie', 'email', 'password');
         } catch (e) {
-            location.href = `https://q.trap.jp/login?redirect=${encodeURIComponent(
+            location.href = `https://portal.trap.jp/login?redirect=${encodeURIComponent(
                 location.href
             )}`;
         }
