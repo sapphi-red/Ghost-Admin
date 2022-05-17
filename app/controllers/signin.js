@@ -38,7 +38,7 @@ export default class SigninController extends Controller.extend(ValidationEngine
         super.init(...arguments);
         this.authProperties = ['identification', 'password'];
         this.authTrap();
-    },
+    }
 
     @alias('model')
         signin;
@@ -56,7 +56,7 @@ export default class SigninController extends Controller.extend(ValidationEngine
                 location.href
             )}`;
         }
-    },
+    }
 
     @(task(function* (authStrategy, authentication) {
         try {
